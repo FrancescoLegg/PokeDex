@@ -1,0 +1,139 @@
+.PokeInfoContainer{
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+}
+
+.GifImageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.GifImageContainer  img{
+    width: 70px;
+    margin: 10px;
+}
+
+/* POKEMON STATS START */
+
+#current-pokemon-stats-atk{
+    background-color: yellow;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#current-pokemon-stats-hp{
+    background-color: green;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+#current-pokemon-stats-def{
+    background-color: orange;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+#current-pokemon-stats-spa{
+    background-color: lightblue;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+#current-pokemon-stats-spd{
+    background-color: plum;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+#current-pokemon-stats-speed{
+    background-color: fuchsia;
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px; 
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#StatsBox span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.StatsBox > div{
+    margin: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.StatsBox{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.AllStats{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+.GenericTypeContainer{
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.GifBox{
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.TypesContainer{
+    width: 100%;
+    justify-content: center;
+}
+
+.Type1{
+    margin-right:200px
+}
+
+
+
