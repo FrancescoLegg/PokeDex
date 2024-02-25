@@ -1,22 +1,24 @@
 const baseUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1320";
-const ImgSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 const PokeContainer = document.getElementById("basePokeContainer");
-ManagePokemonCards(baseUrl, ImgSrc);
+ManagePokemonCards(baseUrl);
 
-function ManagePokemonCards(baseUrl, ImgSrc){
+function ManagePokemonCards(baseUrl){
     fetch(baseUrl)
         .then(response => response.json())
         .then(data => {
             let PokeList = [];
             let PokeListSliced = [];
+            console.log();
             PokeList = data.results;
-            PokeListSliced = PokeList.slice(0,500);
+            PokeListSliced = PokeList.slice(0,data.count);
 
+            const ImgSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
             let cont = 1;
             let AllImg = [];
+
             PokeListSliced.forEach(PokeInfo => {
                 AllImg = ImgSrc + String(cont) + ".png";
-                const createCard = (PokeInfo) =>{
+                const CreatePokemon = (PokeInfo) =>{
                     const Poke = document.createElement("div");
                     Poke.setAttribute("dataID", PokeInfo.id)
                     Poke.classList.add("Pokemon");
@@ -38,7 +40,8 @@ function ManagePokemonCards(baseUrl, ImgSrc){
                     });
                     return Poke;
                 };
-                const Poke = createCard(PokeInfo);
+                
+                let Poke = CreatePokemon(PokeInfo);
                 PokeContainer.appendChild(Poke);
                 cont = cont +1;
             })

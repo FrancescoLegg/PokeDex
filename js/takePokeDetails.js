@@ -31,8 +31,7 @@ function PokeType(ID){
         .then(type =>{
             let PokeType = [];
             PokeType = type;
-            console.log(PokeType.length)
-
+            
             if(PokeType.types.length == 2){
                 document.getElementById("Type1").innerHTML = PokeType.types[0].type.name.charAt(0).toUpperCase() + PokeType.types[0].type.name.slice(1);
                 document.getElementById("Type2").innerHTML = PokeType.types[1].type.name.charAt(0).toUpperCase() + PokeType.types[1].type.name.slice(1);
