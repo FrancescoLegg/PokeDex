@@ -3,11 +3,10 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     padding: 10px;
-    margin-top: 10px;
+    margin: 5px;
     display: none;
     position: fixed;
     right: 0;
-    margin-right: 10px;
 }
 
 .GifImageContainer{
@@ -16,7 +15,7 @@
     justify-content: center;
 }
 .GifImageContainer  img{
-    width: 70px;
+    width: 25%;
     margin: 10px;
 }
 
@@ -109,7 +108,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 

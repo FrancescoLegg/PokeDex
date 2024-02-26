@@ -2,21 +2,25 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #f1f1f1;  
-    justify-content: start  ;
-    margin: 10px;
+    justify-content: start;
+    margin: 5px;
     border-radius: 10px;
 }
   
   .flex-container > div {
     background-color: #f1f1f1;
-    margin: 3px;
-    padding : 20px;
+    margin: 5px;
+    padding : 5px;
     cursor: pointer;
 }
 
 .flex-container h2{
-    font-size: 15px;
+    font-size: 16px;
     color: rgb(0, 0, 0);
     text-align: center; 
     word-wrap: wrap;
+}
+
+.flex-container img{
+    justify-content: center;
 }

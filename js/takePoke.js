@@ -40,7 +40,6 @@ function ManagePokemonCards(baseUrl){
                         fetchPokeDetails(GetPokeID, PokeInfo.name);
                         PokeStats(GetPokeID);
                         PokeType(GetPokeID);
-                        console.log(GetPokeID);
                     });
                     return Poke;
                 };

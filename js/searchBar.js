@@ -1,7 +1,7 @@
 const UserInput = document.getElementById("Searcher");
 const BasePokeURL = "https://pokeapi.co/api/v2/pokemon/"
 
-UserInput.addEventListener('keydown', function(e){
+UserInput.addEventListener('keypress', function(e){
     if(e.key === "Enter"){
         const SearcherURL = BasePokeURL + UserInput.value.toLowerCase();
         fetch(SearcherURL)

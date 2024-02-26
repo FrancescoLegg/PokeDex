@@ -47,5 +47,6 @@ function PokeType(ID){
                     document.getElementById("Type1").innerHTML = "----";
                     document.getElementById("Type2").innerHTML = "----";
             }
+
         })
 }
