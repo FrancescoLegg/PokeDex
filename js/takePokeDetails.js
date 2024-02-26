@@ -49,15 +49,3 @@ function PokeType(ID){
             }
         })
 }
-
-// function PokeAbilities(ID){
-//     const BaseAbilitiesURL = "https://pokeapi.co/api/v2/pokemon/" + String(ID);
-//     fetch(BaseAbilitiesURL)
-//         .then(response => response.json())
-//         .then(abilities => {
-//             let PokeAbilities = []
-//             PokeAbilities = abilities.abilities[0].ability.name;
-
-//             console.log(PokeAbilities);
-//         })
-// }

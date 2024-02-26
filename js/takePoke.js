@@ -41,7 +41,6 @@ function ManagePokemonCards(baseUrl){
                         PokeStats(GetPokeID);
                         PokeType(GetPokeID);
                         console.log(GetPokeID);
-                        //PokeAbilities(GetPokeID);
                     });
                     return Poke;
                 };
