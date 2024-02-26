@@ -17,11 +17,14 @@ function ManagePokemonCards(baseUrl){
             let AllImg = [];
 
             PokeListSliced.forEach(PokeInfo => {
-                AllImg = ImgSrc + String(cont) + ".png";
                 const CreatePokemon = (PokeInfo) =>{
                     const Poke = document.createElement("div");
-                    Poke.setAttribute("dataID", PokeInfo.id)
+                    Poke.setAttribute("dataID", PokeInfo.order)
                     Poke.classList.add("Pokemon");
+                    const PokeInfoURL = PokeInfo.url; 
+                    const DividingUrl = PokeInfoURL.split("/");
+                    let GetPokeID = DividingUrl[DividingUrl.length -2];
+                    AllImg = ImgSrc + String(GetPokeID) + ".png";   
                     Poke.innerHTML = `
                     <div><img src=${AllImg}></div>
                     <div><h2>${PokeInfo.name.charAt(0).toUpperCase() + PokeInfo.name.slice(1)}</h2></div>

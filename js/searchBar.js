@@ -16,13 +16,15 @@ UserInput.addEventListener('keydown', function(e){
                         <div><h2>${AllDataPick.name.charAt(0).toUpperCase() + AllDataPick.name.slice(1)}</h2></div>
                     </div>
                     `;
+                    console.log(SearcherURL);
                     document.getElementById("basePokeContainer").style.justifyContent = "flex-start"
                     document.getElementById("LateralInfoBar").style.display = "block"
-                    fetchPokeDetails(AllDataPick.order, AllDataPick.name);
-                    PokeStats(AllDataPick.order);
-                    PokeType(AllDataPick.order);
+                    fetchPokeDetails(AllDataPick.id, AllDataPick.name);
+                    PokeStats(AllDataPick.id);
+                    PokeType(AllDataPick.id);
                 }else{
-                    document.getElementById("LateralInfoBar").style.display = "none"
+                    PokeContainer.innerHTML = '';
+                    //document.getElementById("LateralInfoBar").style.display = "none"
                     ManagePokemonCards(baseUrl);
                 }  
                 
