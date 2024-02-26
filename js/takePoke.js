@@ -8,8 +8,9 @@ function ManagePokemonCards(baseUrl){
         .then(data => {
             let PokeList = [];
             let PokeListSliced = [];
+            let Alldata = data;
             PokeList = data.results;
-            PokeListSliced = PokeList.slice(0, 1000);
+            PokeListSliced = PokeList.slice(0, 500);
 
             const ImgSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
             let cont = 1;
@@ -36,6 +37,7 @@ function ManagePokemonCards(baseUrl){
                         fetchPokeDetails(GetPokeID, PokeInfo.name);
                         PokeStats(GetPokeID);
                         PokeType(GetPokeID);
+                        console.log(GetPokeID);
                         //PokeAbilities(GetPokeID);
                     });
                     return Poke;

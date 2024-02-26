@@ -17,13 +17,12 @@ UserInput.addEventListener('keydown', function(e){
                     </div>
                     `;
                     document.getElementById("basePokeContainer").style.justifyContent = "flex-start"
-                    PokeContainer.addEventListener("click", () =>{
-                        document.getElementById("LateralInfoBar").style.display = "block"
-                        fetchPokeDetails(AllDataPick.order, AllDataPick.name);
-                        PokeStats(AllDataPick.order);
-                        PokeType(AllDataPick.order);
-                    }) 
+                    document.getElementById("LateralInfoBar").style.display = "block"
+                    fetchPokeDetails(AllDataPick.order, AllDataPick.name);
+                    PokeStats(AllDataPick.order);
+                    PokeType(AllDataPick.order);
                 }else{
+                    document.getElementById("LateralInfoBar").style.display = "none"
                     ManagePokemonCards(baseUrl);
                 }  
                 
