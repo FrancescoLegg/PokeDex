@@ -9,13 +9,14 @@
   
   .flex-container > div {
     background-color: #f1f1f1;
-    margin: 5px;
-    padding : 5px;
+    border-radius: 20px;
+    margin: 4px;
+    padding : 0px;
     cursor: pointer;
 }
 
 .flex-container h2{
-    font-size: 16px;
+    font-size: 10px;
     color: rgb(0, 0, 0);
     text-align: center; 
     word-wrap: wrap;
