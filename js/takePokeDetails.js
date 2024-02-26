@@ -1,6 +1,6 @@
 function fetchPokeDetails(PokeID, PokeName){
     const GetGifUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${PokeID}.gif`;//id or name
-    const GifContainer = document.getElementById("GifBox");
+    const GifContainer = document.getElementById("GifBox"); 
     GifContainer.innerHTML = `
     <div class="GifImageContainer"><img src="${GetGifUrl}"></div>  
     <div><h6>${PokeName.charAt(0).toUpperCase() + PokeName.slice(1)}</h6></div>
@@ -31,6 +31,9 @@ function PokeType(ID){
         .then(type =>{
             let PokeType = [];
             PokeType = type;
+
+            document.getElementById("Type1").innerHTML = '';
+            document.getElementById("Type2").innerHTML = '';
             
             if(PokeType.types.length == 2){
                 document.getElementById("Type1").innerHTML = PokeType.types[0].type.name.charAt(0).toUpperCase() + PokeType.types[0].type.name.slice(1);
@@ -38,11 +41,11 @@ function PokeType(ID){
             }
             else if(PokeType.types.length == 1){
                     document.getElementById("Type1").innerHTML = PokeType.types[0].type.name.charAt(0).toUpperCase() + PokeType.types[0].type.name.slice(1);
-                    document.getElementById("Type2").innerHTML = "-";
+                    document.getElementById("Type2").innerHTML = "----";
             }
             else{
-                    document.getElementById("Type1").innerHTML = "-";
-                    document.getElementById("Type2").innerHTML = "-";
+                    document.getElementById("Type1").innerHTML = "----";
+                    document.getElementById("Type2").innerHTML = "----";
             }
         })
 }
