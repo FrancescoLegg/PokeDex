@@ -18,6 +18,7 @@ UserInput.addEventListener('keypress', function(e){
                     `;
                     console.log(SearcherURL);
                     document.getElementById("basePokeContainer").style.justifyContent = "flex-start"
+                    document.getElementById("basePokeContainer").style.backgroundColor = "transparent"
                     document.getElementById("LateralInfoBar").style.display = "block"
                     fetchPokeDetails(AllDataPick.id, AllDataPick.name);
                     PokeStats(AllDataPick.id);
